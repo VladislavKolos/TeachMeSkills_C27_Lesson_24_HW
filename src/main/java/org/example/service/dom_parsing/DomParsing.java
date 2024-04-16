@@ -3,6 +3,7 @@ package org.example.service.dom_parsing;
 import org.example.service.writing_service.FileWriting;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -31,7 +32,7 @@ public class DomParsing {
 
             System.out.println("Successfully parsed XML using DOM.");
 
-        } catch (ParserConfigurationException | IOException | org.xml.sax.SAXException e) {
+        } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
     }
